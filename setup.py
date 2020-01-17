@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="a5dev", # Replace with your own username
-    version="0.9.1",
+    version="0.9.2",
     author="Ankit Saini",
     author_email="ankitsaini100205@gmail.com",
     description="Helper library for day to day task in a ml engineer's life.",

@@ -49,6 +49,8 @@ class VideoDataset:
         folder = f'dfdc_train_part_{int(part)}'
         if os.path.exists(pathlib.Path(download_path)/folder):
             return cls(pathlib.Path(download_path)/folder)
+        if os.path.exists(f'dfdc_train_part_{part}.zip'):
+            os.remove(f'dfdc_train_part_{part}.zip')
         subprocess.call(['wget', '--load-cookies', cookies_path,
                          dataset_path, '-P', download_path])
         with zipfile.ZipFile(download_path+f'/dfdc_train_part_{part}.zip', 'r') as zip_ref:
